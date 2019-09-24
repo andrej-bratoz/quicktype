@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<index>
+  <cmdfile path=".\.cmd\vs_ctx.xml"/>
+  <cmdfile path=".\.cmd\explorer_ctx.xml"/>
+  <cmdfile path=".\.cmd\cmd_open.xml"/>
+  <cmdfile path=".\.cmd\auto_handle.xml"/>
+</index>
