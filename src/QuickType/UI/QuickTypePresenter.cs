@@ -36,11 +36,11 @@ namespace QuickType.UI
             base(view, viewModel)
         {
             CommandFactory.InitializeFromFile();
-            ViewModel.PropertyChanged += (sender, args) =>
+            ViewModel.PropertyChanged += async (sender, args) =>
             {
                 if (args.PropertyName == nameof(QuickTypeViewModel.LastFocusedWindow))
                 {
-                    OnLastFocusedWindowChanged();
+                    await OnLastFocusedWindowChanged();
                 }
                 else if (args.PropertyName == nameof(QuickTypeViewModel.Mode))
                 {
@@ -95,11 +95,12 @@ namespace QuickType.UI
 
         
 
-        private void OnLastFocusedWindowChanged()
+        private async Task OnLastFocusedWindowChanged()
         {
             QuickTypeCommandManager.Instance.WindowFocus = ViewModel.LastFocusedWindow;
             ViewModel.Results.Clear();
-            var commands = QuickTypeCommandManager.Instance.GetContextCommands();
+            List<QueryResult> commands = new List<QueryResult>();
+            await Task.Run(() => { commands = QuickTypeCommandManager.Instance.GetContextCommands(); });
             commands.ForEach(x => ViewModel.Results.Add(x));
             ViewModel.Mode = WindowMode.Filter;
             View.SetMode(UIMode.Insert);

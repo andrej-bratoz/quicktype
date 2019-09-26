@@ -11,5 +11,7 @@ namespace QuickType.UI
         void Show();
         IntPtr Handle { get; }
         bool IsVisible { get; }
+
+        void ExecuteOnView(Action a);
     }
 }

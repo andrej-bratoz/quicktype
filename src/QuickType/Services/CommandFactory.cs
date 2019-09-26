@@ -55,11 +55,6 @@ namespace QuickType.Services
                     }
                 });
             }
-            //var serializer = new XmlSerializer(typeof(CommandList));
-            //using (var fileReader = File.OpenRead(CommandFile))
-            //{
-            //    CommandCache = (CommandList)serializer.Deserialize(fileReader);
-            //}
         }
 
         public static List<QueryResult> ProcessShortcutsCreator(List<SingleCommand> commands, string filter)

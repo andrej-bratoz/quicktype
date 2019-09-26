@@ -26,6 +26,10 @@ namespace QuickType.UI
 
         public event Action OnLoaded;
         public IntPtr Handle { get; private set; }
+        public void ExecuteOnView(Action a)
+        {
+            Dispatcher.Invoke(a);
+        }
 
         public QuickTypeWindow()
         {
