@@ -1,4 +1,6 @@
-﻿using System.Configuration;
+﻿using System.Collections.Generic;
+using System.Configuration;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Xml.Serialization;
@@ -52,6 +54,8 @@ namespace QuickType.XML
                             return CommandType.ProcessOpen;
                         case 2:
                             return CommandType.AutoHandleWindow;
+                        case 3:
+                            return CommandType.Compound;
                     }
                 }
                 return CommandType.Unknown;
@@ -79,6 +83,9 @@ namespace QuickType.XML
                 _visualStudioContext = value;
             }
         }
+
+        [XmlElement("command")]
+        public List<SingleCommand> SubCommands { get; set; } = new List<SingleCommand>();
 
         private static string ResolveVariable(string value)
         {
