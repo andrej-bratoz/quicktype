@@ -1,93 +1,108 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <commands>
   <!-- ReSharper disable MarkupAttributeTypo -->
-  <command cmd=""
-           name="symbols resharper"
-           type="$(CMD_TYPE_SHORTCUT)"
-           winctx="$(VS_WIN_CTX)"
-           keys="%(xrns)"/>
-  <command cmd=""
-           name="files resharper"
-           type="$(CMD_TYPE_SHORTCUT)"
-           winctx="$(VS_WIN_CTX)"
-           keys="%(xrnf)"/>
+	<command 
+		cmd=""
+		name="symbols resharper"
+		type="$(CMD_TYPE_SHORTCUT)"
+		winctx="$(VS_WIN_CTX)"
+		keys="%(xrns)"/>
+	
+	<command 
+		cmd=""
+		name="files resharper"
+		type="$(CMD_TYPE_SHORTCUT)"
+		winctx="$(VS_WIN_CTX)"
+		keys="%(xrnf)"/>
 
-  <command cmd=""
-           name="text resharper"
-           type="$(CMD_TYPE_SHORTCUT)"
-           winctx="$(VS_WIN_CTX)"
-           keys="%(xrnt){ENTER}"/>
+	<command 
+		cmd=""
+		name="text resharper"
+		type="$(CMD_TYPE_SHORTCUT)"
+		winctx="$(VS_WIN_CTX)"
+		keys="%(xrnt){ENTER}"/>
 
-  <command cmd=""
-           name="team explorer"
-           type="$(CMD_TYPE_SHORTCUT)"
-           winctx="$(VS_WIN_CTX)"
-           keys="%(vm)"/>
+	<command 
+		cmd=""
+		name="team explorer"
+		type="$(CMD_TYPE_SHORTCUT)"
+		winctx="$(VS_WIN_CTX)"
+		keys="%(vm)"/>
 
-  <command cmd=""
-           name="solution explorer"
-           type="$(CMD_TYPE_SHORTCUT)"
-           winctx="$(VS_WIN_CTX)"
-           keys="%(vp)"/>
+	<command 
+		cmd=""
+		name="solution explorer"
+		type="$(CMD_TYPE_SHORTCUT)"
+		winctx="$(VS_WIN_CTX)"
+		keys="%(vp)"/>
 
-  <command cmd=""
-           name="build"
-           type="$(CMD_TYPE_SHORTCUT)"
-           winctx="$(VS_WIN_CTX)"
-           keys="{F6}"/>
+	<command 
+		cmd=""
+		name="build"
+		type="$(CMD_TYPE_SHORTCUT)"
+		winctx="$(VS_WIN_CTX)"
+		keys="{F6}"/>
 
-  <command cmd=""
-           name="start debug"
-           type="$(CMD_TYPE_SHORTCUT)"
-           winctx="$(VS_WIN_CTX)"
-           keys="{F5}"/>
+	<command 
+		cmd=""
+		name="start debug"
+		type="$(CMD_TYPE_SHORTCUT)"
+		winctx="$(VS_WIN_CTX)"
+		keys="{F5}"/>
 
-  <command cmd=""
-           name="start release"
-           type="$(CMD_TYPE_SHORTCUT)"
-           winctx="$(VS_WIN_CTX)"
-           keys="^{F5}"/>
+	<command 
+		cmd=""
+		name="start release"
+		type="$(CMD_TYPE_SHORTCUT)"
+		winctx="$(VS_WIN_CTX)"
+		keys="^{F5}"/>
 
-  <command cmd=""
-           name="call stack"
-           type="$(CMD_TYPE_SHORTCUT)"
-           winctx="$(VS_WIN_CTX)"
-           keys="%(dwc)"/>
+	<command 
+		cmd=""
+		name="call stack"
+		type="$(CMD_TYPE_SHORTCUT)"
+		winctx="$(VS_WIN_CTX)"
+		keys="%(dwc)"/>
 
-  <command cmd=""
-           name="immediate window"
-           type="$(CMD_TYPE_SHORTCUT)"
-           winctx="$(VS_WIN_CTX)"
-           keys="%(dwi)"/>
+	<command 
+		cmd=""
+		name="immediate window"
+		type="$(CMD_TYPE_SHORTCUT)"
+		winctx="$(VS_WIN_CTX)"
+		keys="%(dwi)"/>
 
-  <command cmd=""
-           name="find"
-           type="$(CMD_TYPE_SHORTCUT)"
-           winctx="$(VS_WIN_CTX)"
-           keys="%(eff)"/>
+	<command 
+		cmd=""
+		name="find"
+		type="$(CMD_TYPE_SHORTCUT)"
+		winctx="$(VS_WIN_CTX)"
+		keys="%(eff)"/>
 
-  <command cmd=""
-           name="output"
-           type="$(CMD_TYPE_SHORTCUT)"
-           winctx="$(VS_WIN_CTX)"
-           keys="%(dwo){ENTER}"/>
+	<command 
+		cmd=""
+		name="output"
+		type="$(CMD_TYPE_SHORTCUT)"
+		winctx="$(VS_WIN_CTX)"
+		keys="%(dwo){ENTER}"/>
 
-  <command cmd=""
-           parameter="C:\Program Files\TortoiseGit\bin\TortoiseGitProc.exe"
-           additional="/command:diff /path:&quot;$VS_OPEN_FILE$&quot;"
-           name="diff"
-           type="$(CMD_TYPE_OPEN_PROCESS)"
-           winctx="$(VS_WIN_CTX)"
-           vsver="$(VS_VER)"
-           keys=""/>
+	<command 
+		cmd=""
+		parameter="C:\Program Files\TortoiseGit\bin\TortoiseGitProc.exe"
+		additional="/command:diff /path:&quot;$VS_OPEN_FILE$&quot;"
+		name="diff"
+		type="$(CMD_TYPE_OPEN_PROCESS)"
+		winctx="$(VS_WIN_CTX)"
+		vsver="$(VS_VER)"
+		keys=""/>
 
-  <command cmd=""
-           parameter="C:\Program Files\TortoiseGit\bin\TortoiseGitProc.exe"
-           additional="/command:commit /path:&quot;$VS_OPEN_SOLUTION_DIR$&quot;"
-           name="git commit"
-           type="$(CMD_TYPE_OPEN_PROCESS)"
-           winctx="$(VS_WIN_CTX)"
-           vsver="$(VS_VER)"
-           keys=""/>
+	<command 
+		cmd=""
+		parameter="C:\Program Files\TortoiseGit\bin\TortoiseGitProc.exe"
+		additional="/command:commit /path:&quot;$VS_OPEN_SOLUTION_DIR$&quot;"
+		name="git commit"
+		type="$(CMD_TYPE_OPEN_PROCESS)"
+		winctx="$(VS_WIN_CTX)"
+		vsver="$(VS_VER)"
+		keys=""/>
 </commands>
 

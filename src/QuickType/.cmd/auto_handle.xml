@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <commands>
   <!-- ReSharper disable MarkupAttributeTypo -->
-  <command cmd=""
-           name="About C1Chart"
-           type="$(CMD_TYPE_AUTO_HANDLE_WIN)"
-           keys="{ENTER}"/>
+<command 
+		cmd="" 
+		name="About C1Chart"
+		type="$(CMD_TYPE_AUTO_HANDLE_WIN)"
+		keys="{ENTER}"/>
 </commands>

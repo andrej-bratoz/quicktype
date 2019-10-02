@@ -47,6 +47,7 @@ namespace QuickType.Services
                 {
                     var cmdSerializer = new XmlSerializer(typeof(CommandList));
                     var combinedPath = Path.Combine(cmdFileDir, x.FilePath);
+                    if(!File.Exists(combinedPath)) return;
                     using (var fReader = File.OpenRead(combinedPath))
                     {
                         if (!File.Exists(combinedPath)) return;

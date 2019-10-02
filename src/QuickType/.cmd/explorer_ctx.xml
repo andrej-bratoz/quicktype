@@ -1,28 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <commands>
   <!-- ReSharper disable MarkupAttributeTypo -->
-  <command cmd=""
-           name="powershell"
-           type="$(CMD_TYPE_SHORTCUT)"
-           winctx="explorer"
-           keys="%(fsr)"/>
+	<command 
+		cmd=""
+		name="powershell"
+		type="$(CMD_TYPE_SHORTCUT)"
+		winctx="explorer"
+		keys="%(fsr)"/>
 
-  <command cmd=""
-           name="powershell admin"
-           type="$(CMD_TYPE_SHORTCUT)"
-           winctx="explorer"
-           keys="%(fsa)"/>
+	<command 
+		cmd=""
+		name="powershell admin"
+		type="$(CMD_TYPE_SHORTCUT)"
+		winctx="explorer"
+		keys="%(fsa)"/>
 
-  <command cmd=""
-           name="new folder"
-           type="$(CMD_TYPE_SHORTCUT)"
-           winctx="explorer"
-           keys="^+(n)"/>
+	<command 
+		cmd=""
+		name="new folder"
+		type="$(CMD_TYPE_SHORTCUT)"
+		winctx="explorer"
+		keys="^+(n)"/>
 
-  <command cmd=""
-           name="copy all"
-           type="$(CMD_TYPE_SHORTCUT)"
-           winctx="explorer"
-           keys="^(a)^(c)"/>
-
+	<command 
+		cmd=""
+		name="copy all"
+		type="$(CMD_TYPE_SHORTCUT)"
+		winctx="explorer"
+		keys="^(a)^(c)"/>
 </commands>

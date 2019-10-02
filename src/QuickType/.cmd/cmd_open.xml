@@ -1,23 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <commands>
-  <!-- ReSharper disable MarkupAttributeTypo -->
-  <command parameter="C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\Ssms.exe"
-           cmd="open"
-           type="$(CMD_TYPE_OPEN_PROCESS)"
-           name="ssms"/>
-  <command parameter="C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\devenv.exe"
-           cmd="open"
-           type="$(CMD_TYPE_OPEN_PROCESS)"
-           name="visual studio"/>
-  <command parameter="%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe"
-           cmd="open"
-           type="$(CMD_TYPE_OPEN_PROCESS)"
-           name="powershell"/>
+	<!-- ReSharper disable MarkupAttributeTypo -->
+	<command 
+		parameter="C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\Ssms.exe"
+		cmd="open"
+		type="$(CMD_TYPE_OPEN_PROCESS)"
+		name="ssms"/>
+	<command 
+		parameter="C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\devenv.exe"
+		cmd="open"
+		type="$(CMD_TYPE_OPEN_PROCESS)"
+		name="visual studio"/>
+	
+	<command 
+		parameter="%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe"
+		cmd="open"
+		type="$(CMD_TYPE_OPEN_PROCESS)"
+		name="powershell"/>
 
-  <command parameter="explorer.exe"
-           additional=""
-           cmd="open"
-           type="$(CMD_TYPE_OPEN_PROCESS)"
-           name="explorer"/>
-
+	<command 
+		parameter="explorer.exe"
+		additional=""
+		cmd="open"
+		type="$(CMD_TYPE_OPEN_PROCESS)"
+		name="explorer"/>
 </commands>

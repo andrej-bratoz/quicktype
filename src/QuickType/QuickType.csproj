@@ -71,6 +71,9 @@
     <Compile Include="Enums\CBTProc.cs" />
     <Compile Include="Enums\HookType.cs" />
     <Compile Include="Exceptions\QuickTypeException.cs" />
+    <Compile Include="UI\CommandEditor\CommandEditorWindow.xaml.cs">
+      <DependentUpon>CommandEditorWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\QuickTypeCommand.cs" />
     <Compile Include="Services\AppConstants.cs" />
     <Compile Include="Services\HookManager.cs" />
@@ -93,6 +96,10 @@
     <Compile Include="XML\CommandType.cs" />
     <Compile Include="XML\CommandFileIndex.cs" />
     <Compile Include="XML\SingleCommand.cs" />
+    <Page Include="UI\CommandEditor\CommandEditorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UI\QuickTypeWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
