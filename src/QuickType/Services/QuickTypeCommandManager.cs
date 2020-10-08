@@ -75,9 +75,10 @@ namespace QuickType.Services
 
         public List<QueryResult> GetContextCommands()
         {
-            var text = Process.GetProcesses().Where(x => x.MainWindowHandle == WindowFocus).Select(x => x.ProcessName).FirstOrDefault();
+            WinApiProxy.GetWindowThreadProcessId(WindowFocus, out var procId);
+            var text = Process.GetProcesses().FirstOrDefault(x => x.Id == procId)?.ProcessName;
 #if DEBUG
-            if(!string.IsNullOrEmpty(text)) Debug.WriteLine($"Process = {text}");
+            if (!string.IsNullOrEmpty(text)) Debug.WriteLine($"Process = {text}");
 #endif
             if (string.IsNullOrEmpty(text))
             {
@@ -87,7 +88,8 @@ namespace QuickType.Services
                 }
                 else
                 {
-                    WindowFocus = WinApiProxy.GetParent(WindowFocus);
+                    var focusedWin = WinApiProxy.GetParent(WindowFocus);
+                    if (focusedWin != IntPtr.Zero) WindowFocus = focusedWin;
                     text = Process.GetProcesses().Where(x => x.MainWindowHandle == WindowFocus).Select(x => x.ProcessName).FirstOrDefault();
                 }
                 if (string.IsNullOrEmpty(text)) return new List<QueryResult>();

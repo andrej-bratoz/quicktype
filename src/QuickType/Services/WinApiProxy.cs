@@ -9,6 +9,9 @@ namespace QuickType.Services
 {
     public class WinApiProxy
     {
+        [DllImport("user32.dll")]
+        public static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint lpdwProcessId);
+
         [DllImport("ole32.dll")]
         public static extern int CreateBindCtx(uint reserved, out IBindCtx ppbc);
 
@@ -157,6 +160,19 @@ namespace QuickType.Services
             }
 
             return false;
+        }
+
+        public static string GetActiveWindowTitle()
+        {
+            const int nChars = 256;
+            StringBuilder Buff = new StringBuilder(nChars);
+            IntPtr handle = GetForegroundWindow();
+
+            if (GetWindowText(handle, Buff, nChars) > 0)
+            {
+                return Buff.ToString();
+            }
+            return null;
         }
     }
 }

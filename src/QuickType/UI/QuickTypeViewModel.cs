@@ -146,7 +146,9 @@ namespace QuickType.UI
             {
                 _lastFocusedWindow = value;
                 ContextWindowTitle = WinApiProxy.GetWindowText(value);
-                ContextWindowExe = Process.GetProcesses().FirstOrDefault(x => x.MainWindowHandle == value)?.ProcessName ?? "<??>";
+                var processes = Process.GetProcesses();
+                WinApiProxy.GetWindowThreadProcessId(value, out var procId);
+                ContextWindowExe = Process.GetProcesses().FirstOrDefault(x => x.Id == procId)?.ProcessName ?? "<??>";
                 OnPropertyChanged(nameof(LastFocusedWindow));
             }
         }
